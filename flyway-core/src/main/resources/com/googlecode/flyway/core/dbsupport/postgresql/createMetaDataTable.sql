@@ -26,8 +26,6 @@ CREATE TABLE "${schema}"."${table}" (
     "installed_on" TIMESTAMP NOT NULL DEFAULT now(),
     "execution_time" INTEGER NOT NULL,
     "success" BOOLEAN NOT NULL
-) WITH (
-  OIDS=FALSE
 );
 ALTER TABLE "${schema}"."${table}" ADD CONSTRAINT "${table}_pk" PRIMARY KEY ("version");
 
